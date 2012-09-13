@@ -1,0 +1,188 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+<title>pdcore: public domain *nix userland</title>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+<link rel="stylesheet" href="pdcore_home_page_files/all.css" type="text/css" media="all">
+<link rel="stylesheet" href="pdcore_home_page_files/prn.css" type="text/css" media="print">
+</head>
+<body>
+<div id="header">
+<img alt="Say No to Copyright" title="Say No to Copyright" src="pdcore_home_page_files/nocopyright.png" width="50" height="50">
+<h1>pdcore</h1>
+<p><em>Correct. Concise. Copyright-free.</em></p>
+<hr>
+</div>
+<div id="main">
+<h2>What?</h2>
+<p>The pdcore project aims to produce a
+<a href="http://www.opengroup.org/onlinepubs/9699919799/">POSIX.1-2008</a>
+compliant public domain implementation of the core
+UNIX<sup><a href="#footer">1</a></sup> file, shell and text manipulation
+utilities.</p>
+<h2>Why?</h2>
+<p>Existing implementations (proprietary <em>and</em> FOSS) suffer from one or both
+of two key problems:</p>
+<ol><li><p>They are <a href="#freedom">not truly free</a>.</p></li>
+<li><p>Having added all manner of superfluous cruft, some other implementations
+have long drifted away from <a href="#unixway">the guiding design principles
+of UNIX systems</a>. This has resulted in bloated and talkative utilities,
+and a loss of the user value that having an easily remembered set of clean,
+simple tools originally
+provided.</p></li></ol>
+<h2>Where?</h2>
+<p>The <a href="https://github.com/mooseman/pdcore">project homepage</a>
+ is located on GitHub.</p>
+<h2>Project Status</h2>
+<p>Sources for the utilities and their associated man pages will be added to
+the project as they are released or updated. As the maintainer has less free
+time to code than he'd like, releases are expected to be slow without assistance.
+If you support the aims of the project, please consider
+<a href="#contribute">contributing</a>.</p>
+<a name="freedom"></a>
+<h2>Free (as in Honestly Free)</h2>
+<p>There's a lot of garbage talked about 'freedom' on the web and, sadly,
+it's frequently the most vocal who seem to least well understand the concept.
+So, what is freedom?</p>
+<p><em>Freedom is the absence of coercion and constraint<sup><a href="#footer">2</a></sup>.</em></p>
+<p>A simple concept that we can all grasp, so why do organisations like the
+<a href="http://www.fsf.org/">Free Software Foundation</a> insist on qualifying
+the word with terms such as 'free as in beer' or 'free as in speech'? Maybe
+it's because they truly don't understand that genuine freedom is non-coercive,
+or maybe it's to distract you from remembering that yourself?</p>
+<p>At heart, a software license &#8212; any software license &#8212; is a legal
+assertion of ownership. It exists to formally state that you, the recipient of
+the software, don't truly own it; rather that the copyright holders do. Those
+rights holders may then use the license to grant you various concessions
+in respect of their software, like whether you have permission to access the
+source code, whether they will permit you to modify it and redistribute
+the changed code, and so on.</p>
+<p>The level of perceived benevolence may vary dramatically between
+licenses for proprietary software and those widely used within the FOSS
+community, but any distinctions are purely illusory. To claim that a document,
+the fundamental purpose of which is to legally restrict your freedom, should be
+celebrated for guaranteeing 'free' access to source code or 'free'
+redistribution rights is total sophistry. You might just as well celebrate the
+'free' accommodation and 'free' meals that you would receive whilst serving a
+prison sentence; in both cases, doing so would be overlooking the bigger
+impact on your true freedom.</p>
+<p>In stark contrast to software released under restrictive licenses (and,
+again, there can be no other kind), code placed into the
+<a href="http://en.wikipedia.org/wiki/Public_domain">public domain</a> is
+irrevocably, permanently and honestly free. By dedicating their work to the
+public domain, software authors relinquish any claims of ownership over their
+code, and make it freely available for anyone to use in any manner that
+they may choose. With no claims on ownership, and no restrictions on use,
+public domain code is the only software that meets the basic requirement
+needed to be called truly free &#8212; a guaranteed absence of coercion. Authors
+of public domain code cannot tell you what to do with the software (because,
+unlike licensed code, it no longer belongs to them), nor can they use
+the legal process to forcibly coerce you to obey their wishes or demands.</p>
+<p>Some disdain the public domain as offering too much freedom. They
+point out that there is nothing to stop copies of code therein being used in
+a manner that they don't approve of, or even being placed under license by
+another party. That's perfectly true &#8212; <em>copies</em> of public domain
+works can be. But the original code always stays truly free, and it would be
+a funny kind of 'freedom' that stopped people from acting as they wished.
+For authoritarians everywhere, though, 'free speech' means only that you
+are able to say what <em>they</em> want you to, not necessarily what
+<em>you</em> might want to.</p>
+<p>The source code of the pdcore utilities is placed into the public domain
+through the <a href="http://unlicense.org/">Unlicense</a>. If the code is
+useful to you, you may do whatever you wish with it. No restrictions, no
+coercion, and no license compatibility issues.</p>
+<p>Just honest and irrevocable freedom.</p>
+<a name="unixway"></a>
+<h2>The UNIX Way</h2>
+<p>The success of UNIX over the last
+<a href="http://www.unix.org/what_is_unix/history_timeline.html">40 years</a>
+can be attributed to many factors, but it is commonly accepted that the
+design philosophy underpinning the system,
+<a href="http://en.wikipedia.org/wiki/Unix_philosophy">the UNIX way</a>,
+has been key.</p>
+<p>In the context of userland utilities, exhortations such as "<em>write
+programs that do one thing and do it well</em>", "<em>silence is golden</em>"
+and "<em>design for simplicity</em>" initially led to a well rounded suite of
+user utilities that were efficient and productive.</p>
+<p>The obvious benefit for the user in having one good tool to do each
+particular job is that they find it easy to remember which tool is appropriate
+for any given task. However, and even from the early days of UNIX, as
+<a href="http://harmful.cat-v.org/cat-v/">this paper</a> by Pike and
+Kernighan illustrates, probably well meaning &#8212; but definitely ignorant
+&#8212; people began abusing the philosophy that made UNIX what it was,
+with dire consequences. Sadly, the feature bloat and the resultant user
+confusion discussed by Pike and Kernighan carried on unabated, and is largely
+responsible for the commonly held view of those new to UNIX and
+Linux<sup><a href="#footer">3</a></sup> systems that the command line is a
+frightening and difficult place to be. And they frequently have a point.</p>
+<p>Old-time UNIX users remember that things weren't always this way, but the
+poor souls who have recently come to *nix systems due to the recent growth
+in the use of Linux and its GNU-infested userland frequently end up thinking
+that ugly, bloated code and user confusion are simply part and parcel of
+the *nix experience.</p>
+<p>Whilst standards bodies frequently receive well deserved criticism, those
+responsible for the POSIX specification of the standard UNIX utilities deserve
+a little more credit. Although still too fat for some tastes, their counsel
+on system utilities is far closer to the spirit of the UNIX way than is commonly
+encountered in many modern implementations. You won't find the infamous
+<em>cat&nbsp;-v</em> in POSIX.1-2008, much less the frankly ridiculous
+<em>cat&nbsp;-n</em>; rather, the user is recommended to use the <em>nl</em>
+(number lines) utility if that is the tool that they need.</p>
+<p>The pdcore project aims to provide a complete, correct and
+copyright-free implementation of the POSIX.1-2008 utility set, with no added
+bells, whistles or go-faster stripes. Whilst the project maintainer would
+personally have preferred an even sparser set of utilities, code that is
+never used is useless; consequently, strict adherence to the relatively
+minimalist standard was considered preferable to encourage adoption.</p>
+<p>It is hoped that if you've spent your *nix life fighting with obscure and
+crufty utility sets, from GNU and others, that pdcore will help to make your
+command line existence simpler, more pleasant, and a damn-sight more productive
+&#8212; as that really is <em>the UNIX way</em>.
+<a name="contribute"></a>
+</p><h2>Contribute</h2>
+<p>The project aims to implement all of the non development-oriented
+<a href="http://www.opengroup.org/onlinepubs/9699919799/idx/utilities.html">
+POSIX.1-2008 shell and utilities</a>, moving on for full coverage if possible.
+This is obviously a fairly large undertaking, and any assistance would be
+very welcome.</p>
+<p>If you want to submit code, it would be appreciated if you could work
+to the coding conventions used in the released source. However, the maintainer
+is willing to refactor/rewrite submissions, so that a coherent and
+consistent codebase is maintained.</p>
+<p>As code will be placed into the public domain, all submissions <em>must</em>
+be accompanied by an email &#8212; preferably digitally signed &#8212;
+from their author including the following text:</p>
+<blockquote><p>I dedicate any and all copyright interest in this software to the
+public domain. I make this dedication for the benefit of the public at
+large and to the detriment of my heirs and successors. I intend this
+dedication to be an overt act of relinquishment in perpetuity of all
+present and future rights to this software under copyright law.</p>
+<p>To the best of my knowledge and belief, my contributions are either
+originally authored by me or are derived from prior works which I have
+verified are also in the public domain and are not subject to claims
+of copyright by other parties.</p>
+<p>To the best of my knowledge and belief, no individual, business,
+organization, government, or other entity has any copyright interest
+in my contributions, and I affirm that I will not make contributions
+that are otherwise encumbered.</p></blockquote>
+<p>Please also let me know what name and email address (if any) to include in
+the AUTHORS file in order to give credit for submitted work. Thanks!</p>
+<h2>Contact</h2>
+<p>Online <a href="http://sourceforge.net/projects/pdcore/">at SourceForge</a>,
+or via email to patrick &lt;pdcore@users.sourceforge.net&gt;.</p>
+<p>For obvious reasons, feature requests &#8212; over and above those mandated
+by POSIX.1-2008 &#8212; will be routed to /dev/null.</p>
+</div>
+<hr>
+<div id="footer">
+<a name="footer"></a>
+<a href="http://sourceforge.net/projects/pdcore"><img src="pdcore_home_page_files/sflogo.gif" alt="Get pdcore at SourceForge.net. Fast, secure and Free Open Source software downloads" width="80" height="15"></a>
+<p><sup>1</sup> UNIX is a registered trademark of
+<a href="http://www.opengroup.org/">The Open Group</a>.<br>
+<sup>2</sup> See <em>freedom</em> in your dictionary of choice (e.g.
+<a href="http://en.wiktionary.org/wiki/freedom">here</a>).<br>
+<sup>3</sup> Linux is the <a href="http://www.linuxmark.org/">registered trademark</a>
+of Linus Torvalds in the U.S. and other countries.</p>
+</div>
+
+
+</body></html>

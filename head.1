@@ -1,0 +1,33 @@
+.TH HEAD 1 "2008-1.01" "pdcore utilities" "User Commands"
+.SH NAME
+head \- copy the first part of files
+.SH SYNOPSIS
+.B head
+[-n number] [file ...]
+.SH DESCRIPTION
+Copy the first 'number' lines of the input files to standard output.
+.SH OPTIONS
+.TP
+-n number
+Where 'number' is a positive integer indicating the number of lines to copy.
+If omitted, head will default to copying the first 10 lines of input.
+.SH OPERANDS
+.TP
+file
+Input file(s). If none provided, or the filename '-' is passed to head,
+standard input will be used.
+.SH NOTES
+Prior versions of head allowed '-x' as an option, with 'x' representing
+the number of lines to be copied. The equivalent acceptable syntax is
+now '-n x'.
+.SH "AUTHORITATIVE DOCUMENTATION"
+<http://www.opengroup.org/onlinepubs/9699919799/utilities/head.html>
+.SH VERSION AND COMPLIANCE
+Utility version 1.01
+.P
+Functional compliance with POSIX:2008 (IEEE Std 1003.1-2008;
+Shell and Utilities, Base Specifications Issue 7).
+.SH UNLICENSE
+This is free and unencumbered software released into the public domain,
+provided "as is", without warranty of any kind, express or implied. See the
+file UNLICENSE and the website <http://unlicense.org> for further details.

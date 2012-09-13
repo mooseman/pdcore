@@ -1,0 +1,54 @@
+.TH TAIL 1 "2008-1.01" "pdcore utilities" "User Commands"
+.SH NAME
+tail \- copy the last part of a file
+.SH SYNOPSIS
+.B tail
+[-f] [-c number | -n number] [file]
+.SH DESCRIPTION
+Copy the input file to standard output, starting from a specified location.
+.SH OPTIONS
+.TP
+-f
+Follow the file; keep updating tail's output as the input file grows. Note that
+this option is only available for regular files and FIFOs that are named as
+the 'file' operand, and will be ignored for other inputs (such as unnamed
+pipes).
+.TP
+-c number
+Byte offset of the input file at which output will commence.
+.TP
+-n number
+Line offset of the input file at which output will commence.
+.P
+Byte and line offsets commence at the value 1. If 'number' includes a
+leading '+', the offset is from the start of the input file. If 'number'
+includes a leading '-' or has no prefix, it indicates that the desired
+offset is backwards from the end of the input file.
+.P
+For example, '-n +3' will output the contents of the input file commencing from
+the third line; '-c 20' or '-c -20' starts output twenty bytes prior to the end
+of the input file.
+.P
+For byte offsets, a 'number' value of zero is not permitted. For line offsets,
+the POSIX standard states that the option '-n 0' is valid, but outputs nothing,
+whilst '-n +0' is invalid.
+.P
+Options '-c' and '-n' are mutually exclusive. If neither is specified,
+the default behaviour of tail is to output the last ten lines of the input
+file, as if it had been invoked with the option '-n 10'.
+.SH OPERANDS
+.TP
+file
+Input file. If none provided, or the filename '-' is passed to tail,
+standard input will be used.
+.SH "AUTHORITATIVE DOCUMENTATION"
+<http://www.opengroup.org/onlinepubs/9699919799/utilities/tail.html>
+.SH VERSION AND COMPLIANCE
+Utility version 1.01
+.P
+Functional compliance with POSIX:2008 (IEEE Std 1003.1-2008;
+Shell and Utilities, Base Specifications Issue 7).
+.SH UNLICENSE
+This is free and unencumbered software released into the public domain,
+provided "as is", without warranty of any kind, express or implied. See the
+file UNLICENSE and the website <http://unlicense.org> for further details.

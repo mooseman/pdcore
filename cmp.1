@@ -1,0 +1,37 @@
+.TH CMP 1 "2008-1.01" "pdcore utilities" "User Commands"
+.SH NAME
+cmp \- compare two files
+.SH SYNOPSIS
+.B cmp
+[-l|-s] file1 file2
+.SH DESCRIPTION
+Compare two files. If the contents are the same, produce no output and return
+an exit status of 0. If they differ, report the line and byte position of the
+first difference, and return an exit status of 1. An exit status of 2 will be
+returned in the event of any error.
+.SH OPTIONS
+.TP
+-l
+List all differences, not just the first.
+.TP
+-s
+Silent. No output under any circumstances; returns exit status only.
+.P
+Note that options -l and -s are mutually exclusive.
+.SH OPERANDS
+.TP
+file1, file2
+Input files. If none provided, or the filename '-' is passed to cmp, standard
+input will be used. Note that standard input may only be used for one of the
+file inputs.
+.SH "AUTHORITATIVE DOCUMENTATION"
+<http://www.opengroup.org/onlinepubs/9699919799/utilities/cmp.html>
+.SH VERSION AND COMPLIANCE
+Utility version 1.01
+.P
+Functional compliance with POSIX:2008 (IEEE Std 1003.1-2008;
+Shell and Utilities, Base Specifications Issue 7).
+.SH UNLICENSE
+This is free and unencumbered software released into the public domain,
+provided "as is", without warranty of any kind, express or implied. See the
+file UNLICENSE and the website <http://unlicense.org> for further details.

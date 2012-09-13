@@ -1,0 +1,37 @@
+.TH COMM 1 "2008-1.01" "pdcore utilities" "User Commands"
+.SH NAME
+comm \- select or reject lines common to two files
+.SH SYNOPSIS
+.B comm
+[-123] file1 file2
+.SH DESCRIPTION
+Read 'file1' and 'file2', both of which should be ordered in the current
+collating sequence, and produce three text columns as output: lines unique
+to 'file1', lines unique to 'file2', and lines common to both files.
+.SH OPTIONS
+.TP
+-1
+Suppress output of column one (lines unique to 'file1').
+.TP
+-2
+Suppress output of column two (lines unique to 'file2').
+.TP
+-3
+Suppress output of column three (lines common to both files).
+.P
+.SH OPERANDS
+.TP
+file1, file2
+Input files. If none provided, or the filename '-' is passed to comm,
+standard input will be used.
+.SH "AUTHORITATIVE DOCUMENTATION"
+<http://www.opengroup.org/onlinepubs/9699919799/utilities/comm.html>
+.SH VERSION AND COMPLIANCE
+Utility version 1.01
+.P
+Functional compliance with POSIX:2008 (IEEE Std 1003.1-2008;
+Shell and Utilities, Base Specifications Issue 7).
+.SH UNLICENSE
+This is free and unencumbered software released into the public domain,
+provided "as is", without warranty of any kind, express or implied. See the
+file UNLICENSE and the website <http://unlicense.org> for further details.

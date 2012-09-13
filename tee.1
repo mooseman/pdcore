@@ -1,0 +1,30 @@
+.TH TEE 1 "2008-1.01" "pdcore utilities" "User Commands"
+.SH NAME
+tee \- duplicate standard input
+.SH SYNOPSIS
+.B tee
+[-ai] [file ...]
+.SH DESCRIPTION
+Copy standard input to standard output and any other named files.
+.SH OPTIONS
+.TP
+-a
+Append output to existing files rather than overwriting them.
+.TP
+-i
+Ignore the SIGINT signal.
+.SH OPERANDS
+.TP
+file
+File(s) to duplicate standard input into.
+.SH "AUTHORITATIVE DOCUMENTATION"
+<http://www.opengroup.org/onlinepubs/9699919799/utilities/tee.html>
+.SH VERSION AND COMPLIANCE
+Utility version 1.01
+.P
+Functional compliance with POSIX:2008 (IEEE Std 1003.1-2008;
+Shell and Utilities, Base Specifications Issue 7).
+.SH UNLICENSE
+This is free and unencumbered software released into the public domain,
+provided "as is", without warranty of any kind, express or implied. See the
+file UNLICENSE and the website <http://unlicense.org> for further details.

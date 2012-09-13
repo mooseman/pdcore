@@ -1,0 +1,36 @@
+.TH CAT 1 "2008-1.01" "pdcore utilities" "User Commands"
+.SH NAME
+cat \- concatenate file(s) to standard output
+.SH SYNOPSIS
+.B cat
+[-u] [file ...]
+.SH DESCRIPTION
+Sequentially read input files and write their contents to standard output.
+.SH OPTIONS
+.TP
+-u
+Fully unbuffered read and write.
+.SH OPERANDS
+.TP
+file
+Input file(s). If none provided, or the filename '-' is passed to cat,
+standard input will be used.
+.SH NOTES
+As files are processed sequentially, beware of shell commands like
+.P
+.RS
+cat x y > x
+.RE
+.P
+which destroy input files before reading them.
+.SH "AUTHORITATIVE DOCUMENTATION"
+<http://www.opengroup.org/onlinepubs/9699919799/utilities/cat.html>
+.SH VERSION AND COMPLIANCE
+Utility version 1.01
+.P
+Functional compliance with POSIX:2008 (IEEE Std 1003.1-2008;
+Shell and Utilities, Base Specifications Issue 7).
+.SH UNLICENSE
+This is free and unencumbered software released into the public domain,
+provided "as is", without warranty of any kind, express or implied. See the
+file UNLICENSE and the website <http://unlicense.org> for further details.

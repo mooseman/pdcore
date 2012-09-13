@@ -1,0 +1,45 @@
+
+ACKNOWLEDGEMENT - As the new maintainer of pdcore (as of 13th Sep 2012),  
+I want to acknowledge the good work that the previous maintainer (Patrick Vessey) 
+has put into this project. Very many thanks for your work, Patrick.  
+
+The original README for pdcore follows -  
+********************************************************************* 
+
+DESCRIPTION
+  pdcore is a POSIX.1-2008 compliant public domain implementation of the
+  core *NIX file, shell and text manipulation utilities.
+
+  This utility set differs from existing implementations in one (or both)
+  of two key aspects:
+
+    (1) It is placed entirely within the public domain. See the file
+        UNLICENSE for further details.
+
+    (2) It aims to achieve strict adherence to POSIX.1-2008. Note that
+        this does NOT imply any endorsement of pdcore by The Open Group.
+
+  At a practical level, pdcore can be used as a drop-in replacement for
+  the near-ubiquitous GNU core utility suite. Unlike the latter, pdcore
+  is truly free, respects *nix standards, is vastly smaller, and generally
+  doesn't suck ass.
+
+  Whilst coded and tested on i686 Linux, pdcore ought to compile and run on
+  any POSIX.1-compliant *nix operating system with an ANSI C compiler. The
+  project maintainer would be especially interested in feedback from users
+  of other platforms, and any issues that they might experience (e.g. should
+  endianness causes a problem).
+
+
+PROJECT STATUS 
+  As of 13th Sep 2012 - Andy Elvey is now the maintainer of pdcore, taking over 
+this role from Patrick Vessey.  
+
+
+REFERENCES
+  POSIX.1-2008: <http://www.opengroup.org/onlinepubs/9699919799>
+
+---
+UNIX is a registered trademark of The Open Group.
+Linux is the registered trademark of Linus Torvalds in the U.S. and
+other countries. 
